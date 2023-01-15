@@ -108,7 +108,7 @@ class DocxTpl {
     // clean up
     await deleteTempDir(_dir);
 
-    return zipF.zip_path;
+    return zipF.zipPath;
   }
 
   /// write all fields with provided data

@@ -13,9 +13,9 @@ dependencies:
     sdk: flutter
 
   http: ^0.13.5
-  archive: ^2.0.13
-  xml: ^4.5.1
-  path: ^1.7.0
+  archive: ^3.3.5
+  xml: ^6.1.0
+  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:
