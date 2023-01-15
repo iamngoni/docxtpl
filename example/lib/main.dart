@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:docxtpl/docxtpl.dart';
 import 'package:ext_storage/ext_storage.dart';
 import 'package:filesystem_picker/filesystem_picker.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +8,6 @@ import 'package:open_file/open_file.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-
-import 'package:docxtpl/docxtpl.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -227,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Generate document from asset .docx template',
             ),
-            FlatButton(
+            MaterialButton(
               color: Colors.grey,
               onPressed: () async => await generateDocumentFromAssetTpl(),
               child: Text('Generate from asset tpl'),
@@ -237,14 +236,14 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Generate document from remote .docx template',
             ),
-            FlatButton(
+            MaterialButton(
               color: Colors.grey,
               onPressed: () async => await generateDocumentFromRemoteTpl(),
               child: Text('Generate from remote tpl'),
             ),
             SizedBox(height: 30),
             Divider(),
-            FlatButton(
+            MaterialButton(
               color: Colors.grey,
               onPressed: () async => await _pickTplFile(),
               child: Text('Generate from local .docx file'),
@@ -284,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             SizedBox(height: 15),
-            FlatButton(
+            MaterialButton(
               color: Colors.grey,
               onPressed: () async => await openFile(),
               child: Text('Open generated file'),
